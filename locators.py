@@ -25,6 +25,10 @@ class HomePageLocators:
     sauces_ul = (
         By.XPATH,
         "(.//ul[@class = 'BurgerIngredients_ingredients__list__2A-mT'])[2]")  # выбор соусов на главной странице
+    # локаторы активных вкладок Булок, Соусов и Начинок
+    buns_class = (By.XPATH, ".//span[text()='Булки']/ancestor::div[contains(@class, 'current')]")
+    sauces_class = (By.XPATH, ".//span[text()='Соусы']/ancestor::div[contains(@class, 'current')]")
+    toppings_class = (By.XPATH, ".//span[text()='Начинки']/ancestor::div[contains(@class, 'current')]")
 
 class SignInPageLocators:
     # локаторы авторизации пользователя
