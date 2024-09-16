@@ -3,18 +3,6 @@ from locators import RegistrationFormLocators, SignInPageLocators
 from urls import URLS
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from pytest import fixture
-from faker import Faker
-
-fake = Faker()
-
-@fixture
-def unique_email():
-    return fake.email()
-
-@fixture
-def user_data():
-    return {'username': fake.user_name(), 'password': fake.password()}
 
 class TestRegistrationForm:
 
